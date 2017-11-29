@@ -7,10 +7,12 @@ import static org.junit.Assert.*;
 
 public class ListTaskTests {
     private TaskList list;
+    private Task task;
 
     @Before
     public void setUp () {
         list = new TaskList("TODO");
+        task = new Task("TestTask");
     }
 
     @Test
@@ -21,12 +23,16 @@ public class ListTaskTests {
 
     @Test
     public void addTaskTest() {
-        Task task = new Task("TestTask");
         list.addTask(task);
         assertFalse(list.getTasks().isEmpty());
         assertTrue(list.findTask(task) != null);
     }
 
-
+    @Test
+    public void deleteTaskTest() {
+        addTaskTest();
+        list.deleteTask(task);
+        assertTrue(list.findTask(task) == null);
+    }
 
 }

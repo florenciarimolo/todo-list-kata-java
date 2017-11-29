@@ -32,4 +32,8 @@ public class TaskList {
         }
         return null;
     }
+
+    public void deleteTask(Task task) {
+        tasks.remove(task);
+    }
 }
