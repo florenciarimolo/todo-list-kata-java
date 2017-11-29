@@ -1,4 +1,4 @@
-package edu.inlab.katas
+package edu.inlab.katas;
 
 public class DeleteMeAfterRun {
 
