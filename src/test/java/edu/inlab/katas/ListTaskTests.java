@@ -14,8 +14,19 @@ public class ListTaskTests {
     }
 
     @Test
-    public void ConstructorTaskTest() {
+    public void constructorTaskTest() {
         assertEquals(list.getName(), "TODO");
         assertTrue(list.getTasks().isEmpty());
     }
+
+    @Test
+    public void addTaskTest() {
+        Task task = new Task("TestTask");
+        list.addTask(task);
+        assertFalse(list.getTasks().isEmpty());
+        assertTrue(list.findTask(task) != null);
+    }
+
+
+
 }

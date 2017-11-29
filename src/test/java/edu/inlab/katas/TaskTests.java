@@ -10,25 +10,27 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class TaskTests {
-    Task task;
+    private Task task;
+
     @Before
     public void setUp () {
         task = new Task("Test1");
     }
+
     @Test
-    public void ConstructorTaskTest() {
+    public void constructorTaskTest() {
         assertFalse(task.getDone());
-        assertEquals(task.getName(), "Test1");
+        assertEquals("Test1", task.getName());
     }
 
     @Test
-    public void MarkTaskAsDone() {
+    public void markTaskAsDone() {
         task.markAsDone();
         assertTrue(task.getDone());
     }
 
     @Test
-    public void UnmarkTaskAsDone() {
+    public void unmarkTaskAsDone() {
         task.unMarkAsDone();
         assertFalse(task.getDone());
     }
