@@ -8,14 +8,11 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-public class DeleteMeAfterRunTest {
+public class TaskTests {
     @Test
-    public void test() {
-        assertTrue(true);
-        assertFalse(false);
-        assertEquals(true, true);
-        assertEquals(false, false);
-        assertThat(true, is(true));
-        assertThat(false, is(false));
+    public void ConstructorTaskTest() {
+        Task task = new Task("Test1");
+        assertFalse(task.getDone());
+        assertEquals(task.getName(), "Test1");
     }
 }
