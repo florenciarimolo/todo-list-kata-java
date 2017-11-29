@@ -15,4 +15,11 @@ public class TaskTests {
         assertFalse(task.getDone());
         assertEquals(task.getName(), "Test1");
     }
+
+    @Test
+    public void MarkTaskAsDone() {
+        Task task = new Task("Test1");
+        task.markAsDone();
+        assertTrue(task.getDone());
+    }
 }

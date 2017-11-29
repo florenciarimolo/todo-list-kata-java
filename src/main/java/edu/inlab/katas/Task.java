@@ -16,4 +16,8 @@ public class Task {
     public String getName() {
         return this.name;
     }
+
+    public void markAsDone() {
+        this.done = true;
+    }
 }
